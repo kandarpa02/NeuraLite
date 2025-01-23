@@ -2,11 +2,10 @@ import streamlit as st
 import pickle
 from PIL import Image
 import numpy as np
-import matplotlib.pyplot as plt
-import sys
 import os
+import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
+# Path to the preprocess function and prediction function
 from src.preprocess import preprocess_image
 from src.utils import predict
 
@@ -23,11 +22,19 @@ def upload_and_predict(model_file):
         st.write("Processing...")
 
         try:
-            # Load the model
-            with open(model_file, 'rb') as file:
-                model = pickle.load(file)
-            W, b = model['weights'], model['bias']
-
+            # Check if model file exists and load it
+            if os.path.exists(model_file):
+                with open(model_file, "rb") as file:
+                    model = pickle.load(file)
+            else:
+                raise FileNotFoundError(f"Error: Model file not found at {model_file}")
+            
+            # Assuming model contains 'weights' and 'bias' as keys
+            W, b = model.get('weights'), model.get('bias')
+            
+            if W is None or b is None:
+                raise ValueError("Model is missing weights or biases.")
+            
             # Preprocess the uploaded image
             img_flattened = preprocess_image(uploaded_file)
 
@@ -39,9 +46,8 @@ def upload_and_predict(model_file):
         except Exception as e:
             st.error(f"An error occurred while processing the image: {e}")
 
-
 # Path to the serialized model
-model_file = "/home/kandarpa-sarkar/Desktop/NeuraLite/model/trained_model.pkl"  # Update with the actual path to your .pkl file
+model_file = "model/trained_model.pkl"
 
 # Run the Streamlit app
 if __name__ == "__main__":
