@@ -1,11 +1,46 @@
-# NeuraLite: Only Numpy and Maths
-NeuraLite a alternative to Neural Networks (Just Kidding XD), even a small Neural Net requres higher configurations like CUDA or ROCm and ZLUDA, a minimum 16GB of RAM. But if you use a simple logistic regression algorithm for doing such classification tasks that will be much efficient. My goal was not about defaming Neural Net, that would be stupidity, I only tried to see the limits of classical Machine Learning algorithms
+# NeuraLite: A Minimalistic Approach to Machine Learning
 
-### Performance:
-If you use Neural Nets will get close to `100%` accurate results, but in my case I got `90%` accuracy after hours of training ang tuning hyperparameters
+**NeuraLite** is an exploration of applying classical Machine Learning algorithms to hand written digit classification tasks on the MNIST dataset, using only `Numpy` and a bit of mathematical theory. Unlike Neural Networks, which often require heavy configurations such as CUDA, ROCm, and high-performance hardware, **NeuraLite** uses the simplicity of logistic regression for efficient classification. 
 
-### Challenges: 
-As I did not use any Machine Learning frameworks like Sklearn or Tensorflow it was much harder to implement those maths equations, I used Numpy for that so my workflow was mostly smooth.
+While deep learning techniques, like Neural Networks, often give near-perfect accuracy, **NeuraLite** focuses on achieving competitive results with minimal computational overhead. It’s not about replacing Neural Networks, but rather about testing the boundaries of traditional Machine Learning methods.
 
-### Thoughts:
-I don't recommed anyone to write math equations from scratch in production, it is so inefficient to find the best model over and over and tweak the hyperparameters. But for practicing your learning it's helpful and quite fun.
+### Performance
+While modern Neural Networks typically deliver near 100% accuracy, **NeuraLite** achieved around **90%** accuracy after hours of training and hyperparameter tuning. It's a great example of how simple algorithms can still perform well on complex tasks when optimized properly.
+
+### Challenges
+Building a logistic regression model from scratch without relying on high-level Machine Learning libraries (like Sklearn or TensorFlow) presented its challenges. Implementing mathematical equations for optimization and backpropagation was both a fun and difficult experience. However, by sticking to the basics and utilizing **Numpy**, I was able to create an efficient and functioning model.
+
+### Thoughts
+Although building algorithms from the ground up is an excellent way to learn, I do not recommend using this approach in a production environment. Writing math equations from scratch for each project can be inefficient, especially when trying to find the best model and tuning hyperparameters. However, this project served as a valuable learning experience, allowing me to gain deeper insights into Machine Learning techniques while keeping things fun and hands-on.
+
+### Key Features
+- **Lightweight Model**: Uses logistic regression for efficient training and inference.
+- **Pure Numpy**: No Machine Learning frameworks like TensorFlow or Scikit-Learn—just pure math and Numpy.
+- **Simple and Elegant**: Focuses on understanding the core concepts behind classification tasks.
+
+### Requirements
+1. Python 3.x
+2. Numpy
+3. Matplotlib
+4. Streamlit (for web deployment)
+
+### How to Run
+To run this project locally, follow these steps:
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/kandarpa02/NeuraLite.git
+    cd NeuraLite
+    ```
+
+2. Install dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3. Start the Streamlit app:
+    ```bash
+    streamlit run app.py
+    ```
+
+4. Upload an image for classification and see the results!
