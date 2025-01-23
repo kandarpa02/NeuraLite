@@ -19,7 +19,7 @@ Although building algorithms from the ground up is an excellent way to learn, I 
 - **Simple and Elegant**: Focuses on understanding the core concepts behind classification tasks.
 
 ### Requirements
-1. Python 3.x
+1. Python
 2. Numpy
 3. Matplotlib
 4. Streamlit (for web deployment)
