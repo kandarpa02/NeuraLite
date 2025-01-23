@@ -11,7 +11,7 @@ from src.utils import predict
 
 
 def upload_and_predict(model_file):
-    st.title("MNIST Digit Classifier")
+    st.title("NeuraLite Digit Classifier")
     st.write("Upload an image to predict the digit!")
 
     uploaded_file = st.file_uploader("Choose an image file", type=["png", "jpg", "jpeg", "bmp"])
