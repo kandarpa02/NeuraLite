@@ -1,5 +1,10 @@
 # NeuraLite: A Minimalistic Approach to Machine Learning
-<img src="images/image1.jpeg" alt="Project Screenshot" width="500">
+<table>
+  <tr>
+    <td><img src="images/image1.jpeg" alt="Image 1" width="200"></td>
+    <td><img src="images/image2.jpg" alt="Image 2" width="300"></td>
+  </tr>
+</table>
 
 
 **NeuraLite** is an exploration of applying classical Machine Learning algorithms to hand written digit classification tasks on the MNIST dataset, using only `Numpy` and a bit of mathematical theory. Unlike Neural Networks, which often require heavy configurations such as CUDA, ROCm, and high-performance hardware, **NeuraLite** uses the simplicity of logistic regression for efficient classification. 
