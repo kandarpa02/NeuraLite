@@ -1,8 +1,8 @@
 # NeuraLite: A Minimalistic Approach to Machine Learning
 <table>
   <tr>
-    <td><img src="images/image1.jpeg" alt="Image 1" width="200"></td>
-    <td><img src="images/image2.jpg" alt="Image 2" width="300"></td>
+    <td><img src="images/image1.jpeg" alt="Image 1" width="300"></td>
+    <td><img src="images/image2.jpg" alt="Image 2" width="500"></td>
   </tr>
 </table>
 
