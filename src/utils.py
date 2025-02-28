@@ -8,11 +8,7 @@ def cross_entropy_loss(Prob, y):
     N = y.shape[0]
     loss = -np.sum(y * np.log(Prob + 1e-15)) / N
     return loss
-
-import numpy as np
-
-import numpy as np
-
+    
 def gradient_descent(X, y, epochs, learning_rate, batch_size, tolerance=1e-4, patience=5):
     """
     Gradient descent optimization without L2 regularization and with early stopping.
